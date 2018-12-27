@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "simple-tpv",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "simple-tpv",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/Ivanx95/SimpleTpv",
   "keywords": [
     "Electron",
     "quick",
@@ -14,9 +14,15 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Ivx-others",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^3.0.7"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
   }
 }
