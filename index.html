@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Hi</title>
-       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SimpleTpv</title>
+   
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-    <!-- Compiled and minified JavaScript -->
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
 
+     <section class="section">
+      <div class="container">
+        <h1 class="title">Hi</h1>
+      </div>
+     
 
-     <div class = "container">
-         <h1>Enter Names and Email addresses of your contacts</h1>
-         <div class = "form-group">
-            <label for = "Name">Name</label>
-            <input type = "text" name = "Name" value = "" id = "Name" 
-               placeholder = "Name" class = "form-control" required>
+     <div class = "container editor" id="catalogo">
+         <h1>Producto</h1>
+         <div class = "field">
+            <label  class="label" for = "Des">Descripcion</label>
+            <input  class="input" type = "text" name = "desc" value = "" id = "desc" 
+               placeholder = "Descripcion" required>
          </div>
          
-         <div class = "form-group">
-            <label for = "Email">Email</label>
-            <input type = "email" name = "Email" value = "" id = "Email" 
-               placeholder = "Email" class = "form-control" required>
+         <div class = "field">
+            <label  class="label" for = "Codigo">Código</label>
+            <input class="input" type = "text" name = "codigo"  id = "codigo" 
+               placeholder = "Código" required>
          </div>
          
-         <div class = "form-group">
-            <button class = "btn btn-primary" id = "add-to-list">Add to list!</button>
+         <div class = "field">
+            <label  class="label" for = "Precio">Precio Actual</label>
+            <input class="input" type = "number" name = "precio" id = "precio" step=".01" 
+               placeholder = "Precio Actual" required>
+         </div>
+
+         <div class = "field">
+            <button class = "button is-primary" id = "add-to-list">Añadir a catalogo</button>
          </div>
          
          <div id = "contact-list">
@@ -49,7 +50,7 @@
             </table>
          </div>
         </div>
-
+    </section>
      <script src = "./view.js" ></script>
   </body>
 </html>

@@ -29,5 +29,9 @@ module.exports =(sequelize,DataTypes) => {
 	Producto.associate = function (models) {
 		models.Producto.hasMany(models.Lote);
 	};
+
+	Producto.sync({force:true}).then(function(){
+
+	});
 	return Producto;
-};
+}

@@ -2,35 +2,32 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
-let fs = require('fs');
-
-
-
-let filename = 'contacts';
-let sno = 0;
-
-
-let errorCallback = function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-}
+var express = require('express');
+var models  = require('./models');
+  
+var Catalogo = require('./views/catalog.js');
 
 
 var addToList = document.querySelector('#add-to-list');
+var catComponent = document.getElementById('catalogo');
+
+var catView = new Catalogo(catComponent);
 
 addToList.addEventListener("click",() =>{
-		let name = document.querySelector('#Name').value;
-		let email = document.querySelector('#Email').value;
+      
+      let principalModel = catView.getValue();
+      models.Producto.create(/*{
+                descripcion : desc,
+                codigo : codigo,
+                precioActual : precio
+      }*/ principalModel).then(function (models){
+          console.log("item create with id:"+models);
+      });
 
-		fs.appendFile(filename, name + ',' + email + '\n',errorCallback)
-
-		console.log({name,email});	
-      }
-   		
-);
+      });
 
 
-
+/**
 function loadAndDisplayContacts() {  
    
    //Check if file exists
@@ -54,3 +51,4 @@ function loadAndDisplayContacts() {
 loadAndDisplayContacts();
 
 
+**/

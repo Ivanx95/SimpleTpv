@@ -33,12 +33,12 @@ var Lote = sequelize.define('Lote',
 				{onDelete: "CASCADE",
 					foreignKey : {
 						allowNull:false						
-					},
-					field : 'producto_id'
-					
+					}
 				}
 			)
 	}; 
+
+	Lote.sync({force:true}).then(function (){});
 
 	return Lote;
 
