@@ -3,54 +3,15 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SimpleTpv</title>
-   
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
 
-     <section class="section">
-      <div class="container">
-        <h1 class="title">Hi</h1>
-      </div>
-     
-
-     <div class = "container editor" id="catalogo">
-         <h1>Producto</h1>
-         <div class = "field">
-            <label  class="label" for = "Des">Descripcion</label>
-            <input  class="input" type = "text" name = "desc" value = "" id = "desc" 
-               placeholder = "Descripcion" required>
-         </div>
-         
-         <div class = "field">
-            <label  class="label" for = "Codigo">Código</label>
-            <input class="input" type = "text" name = "codigo"  id = "codigo" 
-               placeholder = "Código" required>
-         </div>
-         
-         <div class = "field">
-            <label  class="label" for = "Precio">Precio Actual</label>
-            <input class="input" type = "number" name = "precio" id = "precio" step=".01" 
-               placeholder = "Precio Actual" required>
-         </div>
-
-         <div class = "field">
-            <button class = "button is-primary" id = "add-to-list">Añadir a catalogo</button>
-         </div>
-         
-         <div id = "contact-list">
-            <table class = "table-striped" id = "contact-table">
-               <tr>
-                  <th class = "col-xs-2">S. No.</th>
-                  <th class = "col-xs-4">Name</th>
-                  <th class = "col-xs-6">Email</th>
-               </tr>
-            </table>
-         </div>
-        </div>
+     <section class="section" id="content">
+     <!-- 
+    -->
     </section>
-     <script src = "./view.js" ></script>
+     <script src = "./renderer.js" ></script>
   </body>
 </html>

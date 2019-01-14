@@ -1,6 +1,6 @@
 'use strict' 
 module.exports = (sequelize,DataTypes) => {
-var Lote = sequelize.define('Lote',
+var Lote = sequelize.define('lote',
 			//columns
 			{
 			fecha:{
@@ -14,12 +14,12 @@ var Lote = sequelize.define('Lote',
 				type : DataTypes.DECIMAL(10,2),
 				field : 'cantidad'
 			}
-			,productoId : {
+			/**,productoId : {
 				 type:           DataTypes.INTEGER,
 
         		references:     'Producto',
 				field : 'producto_id'
-			}
+			}*/
 
 			}
 
@@ -29,7 +29,7 @@ var Lote = sequelize.define('Lote',
 			}); 
 	Lote.associate = function (models) {
 		console.log(models);
-		models.Lote.belongsTo(models.Producto,
+		models.lote.belongsTo(models.producto,
 				{onDelete: "CASCADE",
 					foreignKey : {
 						allowNull:false						
@@ -38,7 +38,7 @@ var Lote = sequelize.define('Lote',
 			)
 	}; 
 
-	Lote.sync({force:true}).then(function (){});
+	//Lote.sync({force:true}).then(function (){});
 
 	return Lote;
 

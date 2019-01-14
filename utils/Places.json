@@ -1,0 +1,10 @@
+{
+	"Catalogo":{
+		"ui":"./views/Catalogo/CatalogUi.html",
+		"view":"./controllers/CatalogoController.js"
+	},
+	"MainPanel" : {
+		"ui":"./views/MainPanel/MainPanelUi.html",
+		"view":"./controllers/MainPanel/MainPanelController.js"	
+	}
+}

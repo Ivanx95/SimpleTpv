@@ -1,0 +1,47 @@
+<div class="container">
+        <h1 class="title">Hi</h1>
+      </div>
+     
+
+     <div class = "container editor" id="catalogo">
+         <h1>Producto</h1>
+         <div class = "field">
+            <label  class="label" for = "Des">Descripcion</label>
+            <input  class="input" type = "text" name = "descripcion" value = "" id = "desc" 
+               placeholder = "Descripcion" required>
+         </div>
+         
+         <div class = "field">
+            <label  class="label" for = "Codigo">Código</label>
+            <input class="input" type = "text" name = "codigo"  id = "codigo" 
+               placeholder = "Código" required>
+         </div>
+         
+         <div class = "field">
+            <label  class="label" for = "Precio">Precio Actual</label>
+            <input class="input" type = "number" name = "precioActual" id = "precio" step=".01" 
+               placeholder = "Precio Actual" required>
+         </div>
+
+         <div class = "field">
+            <button class = "button is-primary" id = "add-to-list">Añadir a catalogo</button>
+         </div>
+         
+         <div>
+            <table class = "table-striped">
+               <tr>
+                  <th class = "col-xs-2">Desc</th>
+                  <th class = "col-xs-4">Código</th>
+                  <th class = "col-xs-6">Precio Actual</th>
+               </tr>
+
+               <tbody id = "catalogo-table">
+                 
+               </tbody>
+            </table>
+         </div>
+        </div>
+    <div>
+          <button class = "button is-primary" id = "login">Cerrar Sesión</button>
+    </div>
+        <script src = "./CatalogoController.js" ></script>
